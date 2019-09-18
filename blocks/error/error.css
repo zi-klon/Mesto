@@ -1,0 +1,15 @@
+@import url(./_active/error_active.css);
+@import url(./__higher/error__higher.css);
+@import url(./__lower/error__lower.css);
+
+.error {
+    position: absolute;
+
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #FF0000;
+
+    display: none;
+}
