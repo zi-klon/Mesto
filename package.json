@@ -1,0 +1,25 @@
+{
+  "name": "mesto",
+  "version": "0.0.1",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zi-klon/Mesto.git"
+  },
+  "author": "Mikhail Danilov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zi-klon/Mesto/issues"
+  },
+  "homepage": "https://github.com/zi-klon/Mesto#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
