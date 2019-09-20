@@ -1,0 +1,6 @@
+@import url(../pages/index.css);
+
+.user-info__button {
+    background-color: red;
+    border: solid red 10px;
+}
