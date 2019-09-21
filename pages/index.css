@@ -1,4 +1,23 @@
-@import url(../vendor/normalize.css);
+/* .user-info__button {
+  background-color: red;
+  border: solid rgb(0, 255, 255) 10px;
+}  */
+
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+@import url('../blocks/root/root.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/logo/logo.css');
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/user-info/user-info.css');
+@import url('../blocks/button/button.css');
+@import url('../blocks/places-list/places-list.css');
+@import url('../blocks/place-card/place-card.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/picture/picture.css');
+@import url('../blocks/error/error.css');
+
+/* @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../blocks/root/root.css);
 @import url(../blocks/header/header.css);
@@ -10,7 +29,7 @@
 @import url(../blocks/place-card/place-card.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/picture/picture.css);
-@import url(../blocks/error/error.css);
+@import url(../blocks/error/error.css); */
 
 body {
   background-color: #000;

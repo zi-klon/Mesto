@@ -2,6 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+new WebpackMd5Hash.DefinePlugin({
+    'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+})
+
 module.exports = {
     entry: { main: './src/index.js' },
     output: {
@@ -19,7 +23,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+                use:  [MiniCssExtractPlugin.loader, {
+                    loader: 'css-loader',
+                    options: {
+                        import: true
+                    }
+                }, 'postcss-loader'
+            ]
             }
         ]
     },
