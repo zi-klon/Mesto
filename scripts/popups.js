@@ -1,4 +1,6 @@
 export { Popup, EditProfile, AddCard, Avatar };
+import { cardsContainer } from '../src/index.js';
+import { api } from '../src/index.js';
 
 class Popup {
     
@@ -112,13 +114,14 @@ class EditProfile extends Popup {
     .then((result) => {
       document.querySelector('.user-info__name').textContent = result.name;
       document.querySelector('.user-info__job').textContent = result.about;
-      this.close();
+      this.closest('.popup').classList.remove('popup_is-opened');
+      document.querySelector('.root').removeChild(this.closest('.popup'));
     })
     .catch((err) => {
       console.log(err);
     }); 
 
-    this.renderButton();
+    this.renderButton;
   }
 }
 
@@ -156,7 +159,8 @@ class AddCard extends Popup {
     api.addUserCard(this.elements.link.value, this.elements.name.value)
     .then((result) => {
       cardsContainer.addCard(result.link, result.name, result.likes, result._id, result.owner._id);
-      this.close();
+      this.closest('.popup').classList.remove('popup_is-opened');
+      document.querySelector('.root').removeChild(this.closest('.popup'));
     })
     .catch((err) => {
       console.log(err);
@@ -238,7 +242,8 @@ class Avatar {
     api.setAvatar(this.elements.link.value)
     .then((result) => {
       document.querySelector('.user-info__photo').style = `background-image: url(${result.avatar})`;        
-      this.close();
+      this.closest('.popup').classList.remove('popup_is-opened');
+      document.querySelector('.root').removeChild(this.closest('.popup'));
     })
     .catch((err) => {
       console.log(err);

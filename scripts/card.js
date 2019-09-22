@@ -1,3 +1,5 @@
+import { api, cardsContainer } from '../src/index.js';
+
 export class Card {
 
   constructor(image, title, likes, id, ownerId) {

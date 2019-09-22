@@ -1,4 +1,4 @@
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort2' : 'https://praktikum.tk/cohort2'
+const serverUrl =/*  NODE_ENV === 'development' ? */ 'http://praktikum.tk/cohort2'/*  : 'https://praktikum.tk/cohort2' */;
 
 import "../pages/index.css";
 import { Api } from '../scripts/api.js';
@@ -7,7 +7,7 @@ import { AddCard, EditProfile, Avatar} from '../scripts/popups.js';
 import { checkInput, validation } from '../scripts/validation.js';
 
 
-const api = new Api(serverUrl, 'ca578415-0f2a-4f10-baae-9836fbf9dafe');
+export const api = new Api(serverUrl, 'ca578415-0f2a-4f10-baae-9836fbf9dafe');
   
 api.getUserData()
 .then((result) => {
@@ -19,7 +19,7 @@ api.getUserData()
   console.log(err);
 }) 
 
-let cardsContainer = {};
+export let cardsContainer = {};
 
 api.getInitialCards()
 .then((result) => {
