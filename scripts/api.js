@@ -1,4 +1,4 @@
-class Api {
+export class Api {
 
   constructor(baseUrl, authorization) { 
     this.baseUrl = baseUrl;
@@ -119,10 +119,10 @@ class Api {
   }
   
   setAvatar(url) {
-    fetch('http://95.216.175.5/cohort2/users/me/avatar', {
+    return fetch('http://95.216.175.5/cohort2/users/me/avatar', {
       method: 'PATCH',
       headers: {
-        authorization: 'ca578415-0f2a-4f10-baae-9836fbf9dafe',
+        authorization: this.authorization,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -134,13 +134,6 @@ class Api {
       return res.json();
       }
       return Promise.reject(`Ошибка: ${res.status}`);
-    })
-    .then((result) => {
-      document.querySelector('.user-info__photo').style = `background-image: url(${result.avatar})`;        
-      closePopup();
-    })
-    .catch((err) => {
-    console.log(err);
-    }); 
+    }) 
   }
 }
