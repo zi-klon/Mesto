@@ -1,4 +1,4 @@
-const api = new Api('http://95.216.175.5/cohort2', 'ca578415-0f2a-4f10-baae-9836fbf9dafe');
+const api = new Api(serverUrl, 'ca578415-0f2a-4f10-baae-9836fbf9dafe');
   
 api.getUserData()
 .then((result) => {
