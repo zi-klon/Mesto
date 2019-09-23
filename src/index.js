@@ -72,8 +72,7 @@ document.querySelector('.picture__close').addEventListener('click', () => {
 
 /* Функция, возвращающая путь к img-файлу */
 function getSource(item) {
-  let source = item.style.backgroundImage.slice(5, -2);
-  return source;
+  return item.style.backgroundImage.slice(5, -2);
 }
 
 /* Функция, открывающая попап с картинкой, и присваивающая элементу img путь к img-файлу  */
