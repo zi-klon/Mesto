@@ -69,10 +69,6 @@ class Popup {
     this.container.classList.remove('popup_is-opened');
     document.querySelector('.root').removeChild(this.container);
   }
-  
-  renderButton() {
-    this.container.querySelector('.popup__button').textContent = 'Загрузка...';
-  }
 }
 
 class EditProfile extends Popup {
@@ -121,7 +117,7 @@ class EditProfile extends Popup {
       console.log(err);
     }); 
 
-    this.renderButton;
+    this.querySelector('.popup__button').textContent = 'Загрузка...';
   }
 }
 
@@ -166,7 +162,8 @@ class AddCard extends Popup {
       console.log(err);
     });
 
-    this.renderButton();
+    this.querySelector('.popup__button').style = 'font-size: 18px';  
+    this.querySelector('.popup__button').textContent = 'Загрузка...';
   }
 }
 
@@ -249,6 +246,7 @@ class Avatar {
       console.log(err);
     });
 
-    this.renderButton();
+    this.querySelector('.popup__button').style = 'font-size: 18px';
+    this.querySelector('.popup__button').textContent = 'Загрузка...';
   }
 }

@@ -87,10 +87,3 @@ function showPicture (event) {
     document.querySelector('.picture__image').setAttribute('src', getSource(event.target));
   }  
 }
-  
-/* Закрытие попапа */
-const closePopup = (() => {
-  const popup = document.querySelector('.popup');
-  popup.classList.remove('popup_is-opened');
-  document.querySelector('.root').removeChild(popup);
-});
