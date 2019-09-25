@@ -119,7 +119,7 @@ export class Api {
   }
   
   setAvatar(url) {
-    return fetch('http://95.216.175.5/cohort2/users/me/avatar', {
+    return fetch(`${this.baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: {
         authorization: this.authorization,
