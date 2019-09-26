@@ -1,7 +1,9 @@
 import "../pages/index.css";
 import { Api } from '../scripts/api.js';
 import { CardList } from '../scripts/cardlist.js';
-import { AddCard, EditProfile, Avatar} from '../scripts/popups.js';
+import { AddCard } from '../scripts/addcard.js';
+import { EditProfile } from '../scripts/editprofile.js';
+import { Avatar } from '../scripts/avatar.js';
 import { checkInput, validation } from '../scripts/validation.js';
 
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort2' : 'https://praktikum.tk/cohort2';
