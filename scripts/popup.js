@@ -1,8 +1,4 @@
-export { Popup};
-import { cardsContainer } from '../src/index.js';
-
-
-class Popup {
+export class Popup {
     
   constructor(title) {
     this.title = title;
